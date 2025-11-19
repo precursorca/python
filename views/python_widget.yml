@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: python-widget
+api_url: /module/python/get_python
+i18n_title: python.widget.title
+icon: fa fa-code
+listing_link: /show/listing/python/python
+search_key: label
+i18n_empty_result: no_data
+badge: count
