@@ -1,0 +1,17 @@
+client_tabs:
+    python:
+        view: python_tab
+        i18n: python.title
+listings:
+    python:
+        view: python_listing
+        i18n: python.listing.title
+reports:
+    python:
+        view: python_report
+        i18n: python.report.title
+widgets:
+    python:
+        view: python_widget
+    python_version:
+        view: python_version_widget
