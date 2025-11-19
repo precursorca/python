@@ -1,0 +1,16 @@
+i18n_title: python.listing.title
+table:
+    -   column: machine.computer_name
+        i18n_header: listing.computername
+        formatter: clientDetail
+        tab_link: python
+    -   column: reportdata.serial_number
+        i18n_header: serial
+    -   column: python.label
+        i18n_header: python.column.label
+    -   column: python.path
+        i18n_header: python.column.path
+    -   column: python.version
+        i18n_header: python.column.version
+    -   column: python.notes
+        i18n_header: python.column.notes
