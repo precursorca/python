@@ -1,0 +1,19 @@
+{
+    "column": {
+        "label": "Label",
+        "path": "Path",
+        "version": "Version",
+        "notes": "Notes"
+    },
+    "listing": {
+        "title": "Python"
+    },
+    "report": {
+        "title": "Python Report"
+    },
+    "title": "Python",
+    "widget": {
+        "title": "Python Type",
+        "version_title": "Python Version"
+    }
+}
