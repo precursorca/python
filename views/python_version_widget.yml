@@ -1,0 +1,9 @@
+type: scrollbox
+widget_id: python-version-scrollbox-widget
+api_url: /module/python/get_python_versions
+i18n_title: python.widget.version_title
+icon: fa-laptop
+listing_link: /show/listing/python/python
+search_key: version
+badge: count
+
