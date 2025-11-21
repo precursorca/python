@@ -61,6 +61,10 @@ for name, path in zip(NAMES, PATHS):
     except Exception as e:
         entry["notes"] = f"Error running python: {e}"
 
+    # ❗ Skip Xcode stub python so no entry appears
+    if name == "Xcode_Python" and entry["version"] == "" and "xcode" in entry["notes"].lower():
+        continue
+
     # Only append entries that actually exist
     results.append(entry)
 
