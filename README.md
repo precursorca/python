@@ -1,8 +1,8 @@
 # python module
 A python module for munkireport
 
-> v. 1.0.0 
-> November 19, 2025 
+> v. 1.0.1 
+> November 21, 2025 
 > Alex Narvey / Precursor.ca
 > 
 <img width="1006" height="270" alt="python_widgets" src="https://github.com/user-attachments/assets/4f4cb536-c068-4c90-b6f3-6c92ae54eb0d" />
@@ -24,6 +24,7 @@ Also shows the version of python and where it is located in the file system.
 
 ## Updates
 
+* November 21, 2025 Version 1.0.1, correct script so it doesn't report munkipython as an Xcode python too.
 * November 19, 2025 Version 1.0.0 
 
 ## Contributors
