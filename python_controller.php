@@ -77,28 +77,40 @@ class Python_controller extends Module_controller
     jsonView($out);
 }
 
-    public function get_data($serial_number = '')
-    {
-        jsonView(
-            Python_model::select('python.*')
-            ->whereSerialNumber($serial_number)
-            ->filter()
-            ->limit(1)
-            ->first()
-            ->toArray()
-        );
+
+public function get_data($serial_number = '')
+{
+    $python = new Python_model();
+
+    // Minimal SQL — get all Python rows for this machine
+    $sql = "SELECT * FROM python WHERE serial_number = '".$serial_number."'";
+
+    $out = [];
+    foreach ($python->query($sql) as $obj) {
+        $out[] = [
+            'label' => $obj->label,
+            'path' => $obj->path,
+            'version' => $obj->version,
+            'notes' => $obj->notes
+        ];
     }
 
-    public function get_list($column = '')
-    {
-        jsonView(
-            Python_model::select("python.$column AS label")
-                ->selectRaw('count(*) AS count')
-                ->filter()
-                ->groupBy($column)
-                ->orderBy('count', 'desc')
-                ->get()
-                ->toArray()
-        );
+    jsonView($out);
+}
+
+public function get_count($serial_number = '')
+{
+    $python = new Python_model();
+
+    $sql = "SELECT COUNT(*) AS count FROM python WHERE serial_number = '".$serial_number."'";
+
+    $out = 0;
+    foreach ($python->query($sql) as $obj) {
+        $out = (int) $obj->count;
     }
+
+    // Return as a JSON object with numberofissues
+    jsonView(['numberofissues' => $out]);
+}
+
 } // END class Python_controller
